@@ -4,6 +4,8 @@
 
 import express from "express";
 
+import api from "./routes/api";
+
 const app = express();
 
 app.get("/", (req, res) => {
@@ -11,5 +13,7 @@ app.get("/", (req, res) => {
     message: "Hello world"
   });
 });
+
+app.use("/api/v1", api);
 
 export default app;
