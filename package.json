@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-db-forms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample app for dynamic forms driven by a MySQL database",
+  "main": "server/app.js",
+  "scripts": {
+    "dev:server:start": "yarn --cwd server dev",
+    "dev:client:start": "yarn --cwd client start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilhelmWillie/dynamic-db-forms.git"
+  },
+  "author": "Wilhelm Willie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilhelmWillie/dynamic-db-forms/issues"
+  },
+  "homepage": "https://github.com/WilhelmWillie/dynamic-db-forms#readme"
+}

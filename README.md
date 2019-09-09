@@ -1,2 +1,3 @@
-# dynamic-db-forms
-sample app for dynamic forms driven by a mysql database 
+# Dynamic DB Forms
+
+Sample app for dynamic forms driven by a MySQL database
