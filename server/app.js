@@ -3,10 +3,13 @@
 */
 
 import express from "express";
+import bodyParser from "body-parser";
 
 import api from "./routes/api";
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   return res.json({
