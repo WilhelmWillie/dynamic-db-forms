@@ -1,16 +1,12 @@
 const Value = (sequelize, type) => {
-  return sequelize.define("field", {
+  return sequelize.define("Value", {
     id: {
       type: type.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    key: {
-      type: type.STRING
-    },
-    value: {
-      type: type.STRING
-    }
+    key: type.STRING,
+    value: type.STRING
   });
 };
 
