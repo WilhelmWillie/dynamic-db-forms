@@ -8,7 +8,8 @@
     "sequelize": "^5.18.4"
   },
   "scripts": {
-    "dev": "npx nodemon --exec babel-node server.js"
+    "dev": "npx nodemon --exec babel-node server.js",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -16,8 +17,10 @@
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
     "husky": "^3.0.5",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "pretty-quick": "^1.11.1",
+    "supertest": "^4.0.2"
   },
   "husky": {
     "hooks": {

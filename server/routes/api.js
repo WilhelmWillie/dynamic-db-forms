@@ -8,12 +8,16 @@ const router = express.Router();
 
 // Form sent to client
 router.get("/form", (req, res) => {
+  // GET active fields
+  // Return JSON array of field objects
   return res.json({
     message: "GET form"
   });
 });
 
 router.post("/form", (req, res) => {
+  // POST response
+  // Send responses based off fields, validate fields, then create corresponding response objects as need be
   return res.json({
     message: "POST form"
   });
