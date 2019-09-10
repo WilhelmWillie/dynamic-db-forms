@@ -1,14 +1,17 @@
-const Field = (sequelize, type) => {
+const Value = (sequelize, type) => {
   return sequelize.define("field", {
     id: {
       type: type.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    order: {
-      type: type.INTEGER
+    key: {
+      type: type.STRING
+    },
+    value: {
+      type: type.STRING
     }
   });
 };
 
-export default Field;
+export default Value;
