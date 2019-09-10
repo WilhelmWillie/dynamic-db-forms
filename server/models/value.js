@@ -1,13 +1,12 @@
-const Value = (sequelize, type) => {
-  return sequelize.define("Value", {
-    id: {
-      type: type.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+"use strict";
+module.exports = (sequelize, DataTypes) => {
+  const Value = sequelize.define(
+    "Value",
+    {
+      label: DataTypes.STRING,
+      value: DataTypes.STRING
     },
-    key: type.STRING,
-    value: type.STRING
-  });
+    {}
+  );
+  return Value;
 };
-
-export default Value;

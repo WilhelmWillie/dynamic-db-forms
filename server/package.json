@@ -5,7 +5,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql2": "^1.7.0",
-    "sequelize": "^5.18.4"
+    "sequelize": "^5.18.4",
+    "sequelize-cli": "^5.5.1"
   },
   "scripts": {
     "dev": "npx nodemon --exec babel-node server.js",

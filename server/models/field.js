@@ -1,14 +1,18 @@
-const Field = (sequelize, type) => {
-  return sequelize.define("Field", {
-    id: {
-      type: type.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+"use strict";
+module.exports = (sequelize, DataTypes) => {
+  const Field = sequelize.define(
+    "Field",
+    {
+      label: DataTypes.STRING,
+      type: DataTypes.STRING,
+      order: DataTypes.INTEGER,
+      required: DataTypes.BOOLEAN,
+      active: DataTypes.BOOLEAN
     },
-    order: type.INTEGER,
-    label: type.STRING,
-    type: type.STRING
-  });
+    {}
+  );
+  Field.associate = function(models) {
+    Field.hasMany(models.Value);
+  };
+  return Field;
 };
-
-export default Field;

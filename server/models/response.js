@@ -1,13 +1,15 @@
-const Response = (sequelize, type) => {
-  return sequelize.define("Response", {
-    id: {
-      type: type.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+"use strict";
+module.exports = (sequelize, DataTypes) => {
+  const Response = sequelize.define(
+    "Response",
+    {
+      username: DataTypes.STRING,
+      value: DataTypes.STRING
     },
-    value: type.STRING,
-    username: type.STRING
-  });
+    {}
+  );
+  Response.associate = function(models) {
+    Response.belongsTo(models.Field);
+  };
+  return Response;
 };
-
-export default Response;
