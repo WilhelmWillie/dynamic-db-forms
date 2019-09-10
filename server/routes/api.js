@@ -4,7 +4,7 @@
 
 import express from "express";
 
-import { Field } from "../models";
+import { Field, Response } from "../models";
 
 const router = express.Router();
 
@@ -54,6 +54,19 @@ router.delete("/form/field/:id", (req, res) => {
   return res.json({
     message: "DELETE field"
   });
+});
+
+// Get a particular user's form responses
+router.get("/response/:username", async (req, res) => {
+  const { username } = req.params;
+
+  const responses = await Response.findAll({
+    where: {
+      username
+    }
+  });
+
+  return res.json(responses);
 });
 
 export default router;
